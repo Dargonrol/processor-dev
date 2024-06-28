@@ -1,0 +1,30 @@
+#############################
+#		  Computer			#
+#############################
+Dragon-1 (SAP-1-ext)	+
+Dragon-2 (Dragon-2) 	-
+Dragon-3 (DRAGON) 		-
+Dragon-4 (DRAGON)		+
+LED+ (LED)				+
+LED++ (LED-rev)			+
+Phönix-1 (PHOENIX)		-
+
+Phönix-2 (PHOENIX-rev)	-
+Surtr-1 ()				-
+
+#############################
+#	  instruction-set's		#
+#############################
+SAP-1-ext		+
+Dragon-2		-
+DRAGON			+
+LED				+
+LED-rev			+
+PHOENIX			+
+PHOENIX-rev		-
+
+
+'+' = finished
+'-' = not finished
+
+

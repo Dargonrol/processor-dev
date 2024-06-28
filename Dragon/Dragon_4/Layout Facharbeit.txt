@@ -1,0 +1,22 @@
+Vorgehensweise
+	Wie bin ich vorgegangen	Planungen auf Papier, die Entwurfe Dragon1-3 erläutern, Nächte inspirationsanstöße..
+	Welche Programme
+	Die ganzen Experimente in der Simulation
+	Erläuterung der Funktionsweise
+
+Ergebnisse:
+	Probleme darstellen, Unterschiede Sim real
+	Was kann mein CPU, wie sieht er aus
+	Unterstüzung darstellen
+
+Ergebnissdiskusion
+	Probleme nochmal sehr kurz ansprechen
+	Was wollte ich machen, konnte ich aber nicht z.B. Pipeline -> Single Stepped, Soundcard, Grafikscard, clock? I/O
+	Was könnte ich in Zukunft besser machen
+	Was könnte mir das ganze gebracht haben für Zukunft
+
+Zusammenfassung
+	Hab ich mein Ziel erreicht?
+	War es das Wert?
+	Zukunft? weitermachen? Weiterentwickeln?
+
