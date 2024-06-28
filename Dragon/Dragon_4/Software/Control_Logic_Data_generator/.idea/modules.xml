@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Control_Logic_Data_generator.iml" filepath="$PROJECT_DIR$/.idea/Control_Logic_Data_generator.iml" />
+      <module fileurl="file://Q:/Software/Python/modules/dragon4/.idea/dragon4.iml" filepath="Q:/Software/Python/modules/dragon4/.idea/dragon4.iml" />
+    </modules>
+  </component>
+</project>

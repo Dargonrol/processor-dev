@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Assembler.iml" filepath="$PROJECT_DIR$/.idea/Assembler.iml" />
+      <module fileurl="file://Q:/Software/Python/modules/tools/.idea/tools.iml" filepath="Q:/Software/Python/modules/tools/.idea/tools.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>404 - Page Not Found</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="stylesheet" href="https://files.faproulette.co/styles/layout.css">
+    </head>
+    <body class="default">
+		<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;">
+			<div class="center" style="position: absolute; top: 50%; margin-top: -60px; left: 0; right: 0;">
+				<h2 class="title normal-title align-center">404 - Page Not Found</h2>
+				<p class="info align-center">The page you're looking for could not be found.</p>
+			</div>
+		</div>
+	</body>
+</html>

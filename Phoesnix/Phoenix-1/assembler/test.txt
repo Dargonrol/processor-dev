@@ -1,0 +1,6 @@
+mov A 0x240f
+shr A
+push 0x2444
+push A
+jmp 0x66ff
+jz A
