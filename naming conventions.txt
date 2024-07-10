@@ -9,7 +9,6 @@ LED+ (LED)				+
 LED++ (LED-rev)			+
 Phönix-1 (PHOENIX)		-
 
-Phönix-2 (PHOENIX-rev)	-
 Surtr-1 ()				-
 
 #############################
