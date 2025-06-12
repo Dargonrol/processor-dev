@@ -1,0 +1,29 @@
+superpipelining
+UART
+Interrupts
+	- Normal Interrupts
+	- Non maskable Interrupts
+	- Reset
+	{ interrupt interruptbar? -> ja ->  prioritäten... -> prop table in mem. ***annhang1***}
+	{ interrupts as trap instr. or different?????? }
+	{ Interrupt reg for defining type of int. etc. trough special instr. modble}
+	{ When interrupt, save machine state, liks all regs inc. flags }
+DMA?
+16 oder 32bit???
+seperate instruction and data Cache
+hardware mul/div?
+CLA adder
+32 registers? saved and temp usw
+program pointer mod-bar, add instr -> don't need jmp instr. but then slower as like in dragon-4
+
+Things like northbrige for graphics card and sound card?????
+or integrated graphics? then seperate graphics mem. 
+
+Flags:
+	Interrupt Enable
+
+
+***anhang1***
+ext. mem wie z.B. Floppy oder Festplatte wo OS drauf ist. und dann auch sowas wie prop table etc.
+ROM on CPU für BIOS, welches OS lädt?
+maybe 2 floppy drives or something else, one for OS other for idk. games? user data?

@@ -1,10 +1,11 @@
 #############################
-#		  Computer			#
+#   CPU/micro-architecture	#
 #############################
 Dragon-1 (SAP-1-ext)	+
 Dragon-2 (Dragon-2) 	-
 Dragon-3 (DRAGON) 		-
 Dragon-4 (DRAGON)		+
+Dragon-5 (WYVERN) 		-
 LED+ (LED)				+
 LED++ (LED-rev)			+
 Phönix-1 (PHOENIX)		-
@@ -12,7 +13,7 @@ Phönix-1 (PHOENIX)		-
 Surtr-1 ()				-
 
 #############################
-#	  instruction-set's		#
+#	  architecture		#
 #############################
 SAP-1-ext		+
 Dragon-2		-
@@ -21,6 +22,7 @@ LED				+
 LED-rev			+
 PHOENIX			+
 PHOENIX-rev		-
+WYVERN			-
 
 
 '+' = finished
