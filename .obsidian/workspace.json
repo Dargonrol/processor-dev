@@ -35,8 +35,7 @@
               "title": "Architecture"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "b3d97ee294fd902f",
@@ -62,12 +61,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dragon/Dragon_5/Instruction Set.md",
+                "file": "readme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Instruction Set"
+              "title": "readme"
             }
           }
         ],
@@ -215,11 +214,12 @@
   },
   "active": "2987d851a4d6b3f4",
   "lastOpenFiles": [
+    "Dragon/Dragon_5/-Dashboard.md",
+    "readme.md",
+    "Dragon/Dragon_5/Instruction Set.md",
     "Dragon/Dragon_5/Architecture.md",
     "Dragon/Dragon_5/Dragon 5 Instruction Set.pdf",
     "Dragon/Dragon_5/Microarchitecture.svg",
-    "Dragon/Dragon_5/Instruction Set.md",
-    "Dragon/Dragon_5/-Dashboard.md",
     "Dragon/Dragon_5/old/Dragon-5.xlsx",
     "Dragon/Dragon_5/old",
     "Dragon/Dragon_5/New folder",
