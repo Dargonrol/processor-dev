@@ -9,7 +9,7 @@
 | *Dragon-5*   | RISC-D (Dragon) | Dragon-5          | Dragon-5 | *WIP*         |
 | LED+         | LED             | LED-ext.          | LED      | abandoned     |
 | Phoenix-1    | -               | -                 | -        | in planning   |
-| Surtr-1      | -               | -                 | -        | in planning   |
+| Surtr-1      | Z80             | Z80               | Z80      | in planning   |
 
 # Descriptions
 ## Dragon-1
