@@ -25,6 +25,7 @@ Special types are only used ones or twice for specific purposes
 | op-code | reg   | 0     | Imm      |
 | ------- | ----- | ----- | -------- |
 | 6-bit   | 5-bit | 5-bit | 8-16-bit |
+
 The instruction *SWi* uses a 16-bit immediate, *SBi* uses a 8-bit immediate.
 *SBi* with a 16-bit immediate results in undefined behavior and should be avoided.
 Compilers should check this.
