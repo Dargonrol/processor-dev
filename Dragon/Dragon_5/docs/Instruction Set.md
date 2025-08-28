@@ -47,7 +47,7 @@
 
 # Jumps and Branches
 (Immediates/Labels in jumps are always an offset)
-Every jump is varaible. That means you can provide a destination register and a source register.
+Every jump is variable. That means you can provide a destination register and a source register.
 A normal jump would look like this:
 **JZ** PC, PC, LABEL
 Take the value of the PC and add it with the offset. Than put this value into the PC again.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dragon/Dragon_5/-Dashboard.md",
+                "file": "Dragon/Dragon_5/docs/Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "-Dashboard"
+              "title": "Architecture"
             }
           },
           {
@@ -27,19 +27,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dragon/Dragon_5/Architecture.md",
+                "file": "Dragon/Dragon_5/docs/Pseudo-Instruction Translation Table.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Architecture"
+              "title": "Pseudo-Instruction Translation Table"
             }
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "b3d97ee294fd902f",
+        "id": "3c7194e52e9057ee",
         "type": "tabs",
         "children": [
           {
@@ -48,26 +48,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dragon/Dragon_5/Instruction Set.md",
+                "file": "Dragon/Dragon_5/docs/Instruction Set.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Instruction Set"
-            }
-          },
-          {
-            "id": "2987d851a4d6b3f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "readme.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "readme"
             }
           }
         ]
@@ -204,6 +190,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -212,14 +199,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a5884607a3b1e818",
+  "active": "aa05eea16e2577b0",
   "lastOpenFiles": [
-    "Dragon/Dragon_5/-Dashboard.md",
-    "Dragon/Dragon_5/Architecture.md",
+    "Dragon/Dragon_5/docs/Architecture.md",
+    "Dragon/Dragon_5/docs/Pseudo-Instruction Translation Table.md",
+    "Dragon/Dragon_5/docs/Instruction Set.md",
+    "Dragon/Dragon_5/info.md",
+    "Dragon/Dragon_5/docs",
     "readme.md",
-    "Dragon/Dragon_5/Instruction Set.md",
     "Dragon/Dragon_5/Dragon 5 Instruction Set.pdf",
-    "Dragon/Dragon_5/Microarchitecture.svg",
+    "Dragon/Dragon_5/docs/Microarchitecture.svg",
     "Dragon/Dragon_5/old/Dragon-5.xlsx",
     "Dragon/Dragon_5/old",
     "Dragon/Dragon_5/New folder",
