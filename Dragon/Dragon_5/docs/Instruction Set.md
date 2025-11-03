@@ -89,16 +89,16 @@ Take the value of R2, add it with the offset and put it into R1.
 
 # Other Instructions
 
-| Instr.     | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | pseudo | Instr type | info                                  |
-| ---------- | ------- | ------- | ------- | -------- | ---- | ------ | ---------- | ------------------------------------- |
-| **NOP**    | -       | -       | -       | ``0x00`` | 1    |        |            | No operation                          |
-| **NOP**    |         |         |         | ``0x39`` |      |        |            | reserved                              |
-| **NOP**    |         |         |         | ``0x3A`` |      |        |            | reserved                              |
-| **NOP**    |         |         |         | ``0x3B`` |      |        |            | reserved                              |
-| **NOP**    |         |         |         | ``0x3C`` |      |        |            | reserved                              |
-| **NOP**    |         |         |         | ``0x3D`` |      |        |            | reserved                              |
-| **NOP**    |         |         |         | ``0x3E`` |      |        |            | reserved                              |
-| **HALT**   | -       | -       | -       | ``0x3F`` | 1    |        |            | halts the CPU                         |
+| Instr.   | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | pseudo | Instr type | info          |
+| -------- | ------- | ------- | ------- | -------- | ---- | ------ | ---------- | ------------- |
+| **NOP**  |         |         |         | ``0x00`` | 1    |        |            | No operation  |
+| **NOP**  |         |         |         | ``0x39`` |      |        |            | reserved      |
+| **NOP**  |         |         |         | ``0x3A`` |      |        |            | reserved      |
+| **NOP**  |         |         |         | ``0x3B`` |      |        |            | reserved      |
+| **NOP**  |         |         |         | ``0x3C`` |      |        |            | reserved      |
+| **NOP**  |         |         |         | ``0x3D`` |      |        |            | reserved      |
+| **NOP**  |         |         |         | ``0x3E`` |      |        |            | reserved      |
+| **HALT** |         |         |         | ``0x3F`` | 1    |        |            | halts the CPU |
 
 
 # Pseudo Instructions
