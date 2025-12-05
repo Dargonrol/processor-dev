@@ -1,30 +1,31 @@
 # Instruction Types
 
-**RRR-Type (Register Register Register Instruction type)** 3 byte
+**RRR-Type (Register Register Register Instruction type)** 3 byte (24bit)
 
-| op-code | reg   | reg   | reg   | 0     |
-| ------- | ----- | ----- | ----- | ----- |
-| 6-bit   | 5-bit | 5-bit | 5-bit | 4-bit |
+| 0 23:21 | reg3 20:16 | reg2 15:11 | reg1 10:6 | op-code 5:0 |
+| ------- | ---------- | ---------- | --------- | ----------- |
+| 3-bit   | 5-bit      | 5-bit      | 5-bit     | 6-bit       |
 
-**RR-Type (Register Register Instruction type)**  2 byte
+**RR-Type (Register Register Instruction type)**  2 byte (16bit)
 
-| op-code | reg   | reg   | 0     | 0     |
-| ------- | ----- | ----- | ----- | ----- |
-| 6-bit   | 5-bit | 5-bit | 4-bit | 4-bit |
+| reg2 15:11 | reg1 10:6 | op-code 5:0 |
+| ---------- | --------- | ----------- |
+| 5-bit      | 5-bit     | 6-bit       |
 
-**RRI-Type (Register Register Immediate Instruction type)** 4 byte
+**RRI-Type (Register Register Immediate Instruction type)** 4 byte (32bit)
 
-| op-code | reg   | reg   | imm    |
-| ------- | ----- | ----- | ------ |
-| 6-bit   | 5-bit | 5-bit | 16-bit |
+| imm 31:16 | reg2 15:11 | reg1 10:6 | op-code 5:0 |
+| --------- | ---------- | --------- | ----------- |
+| 16-bit    | 5-bit      | 5-bit     | 6-bit       |
 
 ### special types
 Special types are only used ones or twice for specific purposes
 **RI-Type (Register Immediate Instruction Type)** 3/4 byte
 
-| op-code | reg   | 0     | Imm      |
-| ------- | ----- | ----- | -------- |
-| 6-bit   | 5-bit | 5-bit | 8-16-bit |
+| imm 23:16/31:16 | 0 15:11 | reg1 10:6 | op-code 5:0 |
+| --------------- | ------- | --------- | ----------- |
+| 8/16-bit        | 5-bit   | 5-bit     | 6-bit       |
+
 
 The instruction *SWi* uses a 16-bit immediate, *SBi* uses a 8-bit immediate.
 *SBi* with a 16-bit immediate results in undefined behavior and should be avoided.

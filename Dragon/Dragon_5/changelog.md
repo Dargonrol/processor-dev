@@ -8,5 +8,10 @@
 - separate pseudo instruction from main instruction (put into separate table with translations included)
 - (holy sh#t, the jump instructions are so much better now!!)
 
-
+### 05.12.2025
+- corrected Instruction Types documentation and added additional information
+- continued Microarchitecture diagram (SVG)
+- improved instruction decoding
+	Since Instructions can and mostly are longer than 2 byte but we only have a 16bit Bus we have to fetch in 2 cycles. For the RRR-Type instructions I moved the destination register to the second word so that the pipeline can already start working with the first two bytes and no stall is needed. For every other Instruction with a destination register I moved the destination register to the last position to make decoding easier.
+- added LogiSim file
 
