@@ -43,11 +43,11 @@
 absolute jump:
 **JMP** reg, Imm
 PC = reg + Imm
-**JALr** RA, reg, Imm (modifies RA register)
+**JALr** reg, RA, Imm (modifies RA register)
 PC = reg + Imm ; RA = PC + 4
 
 relative jump:
-**JALr** RA, PC, Imm | or | **JAL** Imm
+**JALr** PC, RA, Imm | or | **JAL** Imm
 **JZ** LABEL
 if zeroflag = 1:
 	RA=PC+4,    PC+=Imm(signed)

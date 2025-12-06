@@ -15,3 +15,8 @@
 	Since Instructions can and mostly are longer than 2 byte but we only have a 16bit Bus we have to fetch in 2 cycles. For the RRR-Type instructions I moved the destination register to the second word so that the pipeline can already start working with the first two bytes and no stall is needed. For every other Instruction with a destination register I moved the destination register to the last position to make decoding easier.
 - added LogiSim file
 
+### 05.12.2025 (2)
+- continued microarchitecture diagram
+- fixed jumps explanation in ISA
+- after careful consideration, omitted the variable instruction length idea because it would make the architecture and microarchitecture a whole lot more complicated.
+	An extra bit to decode the instruction length would be needed which would only allow for 15-bit immediates and with RRR-Types one register would need to be 4bit addressable instead of 5. Both are limitations I can live with but this makes the instructions not word aligned and decoding harder. instructions longer than 2 byte cannot any longer be fetched in 2 cycles but must be present as a whole on one cycle. **Therefore every instruction is now 4 Bytes long** Maybe make a Dragon-5V in the future...

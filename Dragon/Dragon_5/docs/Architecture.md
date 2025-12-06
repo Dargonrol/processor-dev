@@ -74,7 +74,7 @@ Compilers should check this.
 | ``0x14``   | reserved |                    |
 | ``0x15``   | reserved |                    |
 | ``0x16``   | reserved |                    |
-| ``0x17``   | reserved |                    |
+| ``0x17``   | EPC      | Exception PC       |
 | ``0x18``   | IR       | Interrupt Register |
 | ``0x19``   | TP       | trap pointer       |
 | ``0x1A``   | GP       | global pointer     |

@@ -1,7 +1,7 @@
 #Dashboard #Dragon5 #Dragon
 ## general information
 - 16bit CPU
-- Pipelinded (5 stages)
+- Pipelinded (4 stages)
 - separate data/instruction-cache
 - dynamic instruction range
 	- 16bit memory addr, 2 byte word (therefore no need for (auipc)
