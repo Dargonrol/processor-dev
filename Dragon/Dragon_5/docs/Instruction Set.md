@@ -36,7 +36,7 @@
 | **SHRai** | regS    | regD    | Imm     | ``0x1C`` | 4    | RRI        |                            |
 | **ROR**   | regS    | regD    |         | ``0x1D`` | 2    | RR         | rotate right               |
 | **ROL**   | regS    | regD    |         | ``0x1E`` | 2    | RR         | rotate left                |
-| **NOP**   |         |         |         | ``0x1F`` |      |            | reserved                   |
+| **NOP**   |         |         |         | ``0x1F`` | 1    |            | reserved                   |
 
 
 # Jumps
@@ -70,35 +70,36 @@ Take the value of R2, add it with the offset and put it into R1.
 | **JLEr** | regS    | regD    | offs     | ``0x2C`` | 4    | RRI        | Jump if less or equal ``ZF==1 or SF!=OF`` (signed)   |
 | **JAr**  | regS    | regD    | offs     | ``0x2D`` | 4    | RRI        | Jump if above ``CF==0 and ZF==0`` (unsigned)         |
 | **JBEr** | regS    | regD    | offs     | ``0x2E`` | 4    | RRI        | Jump if Below or Equal ``CF==1 or ZF==1`` (unsigned) |
-| **JBIT** | bit     | reg     | offs     | ``0x2F`` | 4    | RRI^       | Jump if BIT is set in REG                            |
-^ 2. argument is interpreted as an 8-bit immediate which is used for bit-masking. 
+| **NOP**  |         |         |          | ``0x2F`` | 1    |            | reserved                                             |
 
 # Memory Operations
 
-| Instr.   | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | pseudo | Instr type | info                    |
-| -------- | ------- | ------- | ------- | -------- | ---- | ------ | ---------- | ----------------------- |
-| **SW**   | regS    | regS    | Imm     | ``0x30`` | 4    |        | RR         | store word              |
-| **LW**   | regS    | regD    | Imm     | ``0x31`` | 4    |        | RR         | load word               |
-| **SB**   | regS    | regS    | Imm     | ``0x32`` | 4    |        | RR         | store byte              |
-| **LB**   | regS    | regD    | Imm     | ``0x33`` | 4    |        | RR         | load byte               |
-| **SWi**  | regS    | Imm     |         | ``0x34`` | 4    |        | RI         | Store Immediate at regS |
-| **SBi**  | regS    | Imm     |         | ``0x35`` | 3    |        | RI         |                         |
-| **MOV**  | regS    | regD    |         | ``0x36`` | 2    |        | RR         | move                    |
-| **PUSH** | regS    | regD    |         | ``0x37`` | 2    |        | RR         | push to stack or heap   |
-| **POP**  | regS    | regD    |         | ``0x38`` | 2    |        | RR         | pop from stack or heap  |
+| Instr.  | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | Instr type | info                    |
+| ------- | ------- | ------- | ------- | -------- | ---- | ---------- | ----------------------- |
+| **SW**  | regS    | regS^   | Imm     | ``0x30`` | 4    | RR         | store word              |
+| **LW**  | regS    | regD    | Imm     | ``0x31`` | 4    | RR         | load word               |
+| **SWi** | regS    | Imm     |         | ``0x32`` | 4    | RI         | Store Immediate at regS |
+| **MOV** | regS    | regD    |         | ``0x33`` | 2    | RR         | move                    |
+^ this is the value that get's saved
 
 # Other Instructions
 
-| Instr.   | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | pseudo | Instr type | info          |
-| -------- | ------- | ------- | ------- | -------- | ---- | ------ | ---------- | ------------- |
-| **NOP**  |         |         |         | ``0x00`` | 1    |        |            | No operation  |
-| **NOP**  |         |         |         | ``0x39`` |      |        |            | reserved      |
-| **NOP**  |         |         |         | ``0x3A`` |      |        |            | reserved      |
-| **NOP**  |         |         |         | ``0x3B`` |      |        |            | reserved      |
-| **NOP**  |         |         |         | ``0x3C`` |      |        |            | reserved      |
-| **NOP**  |         |         |         | ``0x3D`` |      |        |            | reserved      |
-| **NOP**  |         |         |         | ``0x3E`` |      |        |            | reserved      |
-| **HALT** |         |         |         | ``0x3F`` | 1    |        |            | halts the CPU |
+| Instr.   | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | Instr type | info          |
+| -------- | ------- | ------- | ------- | -------- | ---- | ---------- | ------------- |
+| **NOP**  |         |         |         | ``0x00`` | 1    |            | No operation  |
+| **NOP**  |         |         |         | ``0x34`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x35`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x36`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x37`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x38`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x39`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x3A`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x3B`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x3C`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x3D`` |      |            | reserved      |
+| **NOP**  |         |         |         | ``0x3E`` |      |            | reserved      |
+| **HALT** |         |         |         | ``0x3F`` | 1    |            | halts the CPU |
+
 
 
 # Pseudo Instructions
@@ -141,18 +142,17 @@ Take the value of R2, add it with the offset and put it into R1.
 | **JBE** | offs       |         |         | **JBEr** PC x0 offs     | ``0x2E`` |                    |
 
 ## Memory Operations
-| Instr.      | Attr. 1 | Attr. 2 | Attr. 3 | translation          | OP-code  | info                              |
-| ----------- | ------- | ------- | ------- | -------------------- | -------- | --------------------------------- |
-| **WRITE**   | regS    | regS    | Imm     | **SW** regS regS Imm | ``0x30`` |                                   |
-| **READ**    | regS    | regD    | Imm     | **LW** regS regD Imm | ``0x31`` |                                   |
-| **WRITEb**  | regS    | regS    | Imm     | **SB** regS regS Imm | ``0x32`` |                                   |
-| **READb**   | regS    | regD    | Imm     | **LB** regS regD Imm | ``0x33`` |                                   |
-| **WRITEi**  | regS    | Imm     |         | **SWi** regS Imm     | ``0x34`` |                                   |
-| **WRITEbi** | regS    | Imm     |         | **SBi** regS Imm     | ``0x35`` |                                   |
-| **MV**      | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |
-| **MOVE**    | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |
-| **RET**     |         |         |         | **MOV** PC RA        | ``0x36`` | PC = RA (does not pop from stack) |
-| **RETURN**  |         |         |         | **MOV** PC RA        | ``0x36`` |                                   |
+| Instr.     | Attr. 1 | Attr. 2 | Attr. 3 | translation          | OP-code  | info                              |                |
+| ---------- | ------- | ------- | ------- | -------------------- | -------- | --------------------------------- | -------------- |
+| **WRITE**  | regS    | regS    | Imm     | **SW** regS regS Imm | ``0x30`` |                                   |                |
+| **READ**   | regS    | regD    | Imm     | **LW** regS regD Imm | ``0x31`` |                                   |                |
+| **WRITEi** | regS    | Imm     |         | **SWi** regS Imm     | ``0x34`` |                                   |                |
+| **MV**     | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |                |
+| **MOVE**   | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |                |
+| **RET**    |         |         |         | **MOV** PC RA        | ``0x36`` | PC = RA (does not pop from stack) |                |
+| **RETURN** |         |         |         | **MOV** PC RA        | ``0x36`` |                                   |                |
+| **PUSH**   | reg     | offs    |         | **SW** SP reg offs   | ``0x30`` |                                   | push to stack  |
+| **POP**    | reg     | offs    |         | **LW** SP reg offs   | ``0x31`` |                                   | pop from stack |
 
 ## other Instructions
 | Instr.     | Attr. 1 | Attr. 2 | Attr. 3 | translation    | OP-code  | info         |

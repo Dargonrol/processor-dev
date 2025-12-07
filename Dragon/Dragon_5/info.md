@@ -20,7 +20,7 @@
 # CPU comparison
 ## **Dragon 5:**
 ### Instruction count
-**Total Instruction Count (used op-codes):** 57 (without pseudo)
+**Total Instruction Count (used op-codes):** 50 (without pseudo)
 **Maximal Instruction Count:** 64, 6-bit
 ### Features
 **Pipelined:** yes

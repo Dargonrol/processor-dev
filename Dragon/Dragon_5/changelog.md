@@ -20,3 +20,11 @@
 - fixed jumps explanation in ISA
 - after careful consideration, omitted the variable instruction length idea because it would make the architecture and microarchitecture a whole lot more complicated.
 	An extra bit to decode the instruction length would be needed which would only allow for 15-bit immediates and with RRR-Types one register would need to be 4bit addressable instead of 5. Both are limitations I can live with but this makes the instructions not word aligned and decoding harder. instructions longer than 2 byte cannot any longer be fetched in 2 cycles but must be present as a whole on one cycle. **Therefore every instruction is now 4 Bytes long** Maybe make a Dragon-5V in the future...
+
+### 06.12.2025
+- continued Microarchitecture
+- removed **JBIT** instruction.
+	while it is totally possible to implement this instruction, it requires special logic outside of normal flag based jumps. Since I want to keep Dragon 5 "as simple as possible" I choose to not include this one.
+- removed **SB** and **LB** instructions
+	I decided that my memory will not by byte addressable and the smallest possible unit is 16 bits. This makes things simpler.
+- made **PUSH** and **POP** instructions Pseudo instructions

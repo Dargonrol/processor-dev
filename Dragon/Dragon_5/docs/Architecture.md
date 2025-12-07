@@ -22,15 +22,9 @@
 Special types are only used ones or twice for specific purposes
 **RI-Type (Register Immediate Instruction Type)** 3/4 byte
 
-| imm 23:16/31:16 | 0 15:11 | reg1 10:6 | op-code 5:0 |
-| --------------- | ------- | --------- | ----------- |
-| 8/16-bit        | 5-bit   | 5-bit     | 6-bit       |
-
-
-The instruction *SWi* uses a 16-bit immediate, *SBi* uses a 8-bit immediate.
-*SBi* with a 16-bit immediate results in undefined behavior and should be avoided.
-Compilers should check this.
-(The behavior depends on the implementation of the architecture. If the *SBi* instruction is treated like a 4-Byte long instruction worst case it stores the wrong value. If it is treated like a 3-Byte long instruction however the PC will increase to the wrong value and the lower Byte of the Immediate will be interpreted as a new instruction)
+| imm 31:16 | 0 15:11 | reg1 10:6 | op-code 5:0 |
+| --------- | ------- | --------- | ----------- |
+| 16-bit    | 5-bit   | 5-bit     | 6-bit       |
 
 
 **0-Type (Zero Type instructions)** 1 byte
@@ -41,9 +35,9 @@ Compilers should check this.
 
 # Instruction Layout
 
-``0b00 0000 - 0b00 1111`` | arithmetic (15 used [max])
+``0b00 0001 - 0b00 1111`` | arithmetic (15 used [max])
 ``0b01 0000 - 0b01 1111`` | logic (15 used [1 free])
-``0b10 0000 - 0b10 1111`` | branch (16 used [max])
+``0b10 0000 - 0b10 1111`` | branch (15 used [1 free])
 ``0b11 1000 - 0b11 1111`` | memory and other
 
 
