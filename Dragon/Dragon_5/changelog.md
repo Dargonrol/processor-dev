@@ -28,3 +28,8 @@
 - removed **SB** and **LB** instructions
 	I decided that my memory will not by byte addressable and the smallest possible unit is 16 bits. This makes things simpler.
 - made **PUSH** and **POP** instructions Pseudo instructions
+
+### 07.12.2025
+- worked on simulation
+	- finished register file
+	
