@@ -74,25 +74,25 @@ Take the value of R2, add it with the offset and put it into R1.
 
 # Memory Operations
 
-| Instr.  | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | Instr type | info                    |
-| ------- | ------- | ------- | ------- | -------- | ---- | ---------- | ----------------------- |
-| **SW**  | regS    | regS^   | Imm     | ``0x30`` | 4    | RR         | store word              |
-| **LW**  | regS    | regD    | Imm     | ``0x31`` | 4    | RR         | load word               |
-| **SWi** | regS    | Imm     |         | ``0x32`` | 4    | RI         | Store Immediate at regS |
-| **MOV** | regS    | regD    |         | ``0x33`` | 2    | RR         | move                    |
-^ this is the value that get's saved
-
+| Instr.   | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | Instr type | info                       |
+| -------- | ------- | ------- | ------- | -------- | ---- | ---------- | -------------------------- |
+| **SW**   | regS    | regS^   | offs    | ``0x30`` | 4    | RRI        | store word                 |
+| **LW**   | regS    | regD^   | offs    | ``0x31`` | 4    | RRI        | load word                  |
+| **SWi**  | regS    | Imm     |         | ``0x32`` | 4    | RI         | Store Immediate at regS    |
+| **MOV**  | regS    | regD    |         | ``0x33`` | 2    | RR         | move                       |
+| **SW0**  | regS    | regS^   | offs    | ``0x34`` | 4    | RRI        | ignores mem bank           |
+| **LW0**  | regS    | regD^   | offs    | ``0x35`` | 4    | RRI        | ignores mem bank           |
+| **SWB**  | regS    | regS^   | Imm^^   | ``0x36`` | 4    | RRI        | Store word Bank (Imm)      |
+| **LWB**  | regS    | regD^   | Imm^^   | ``0x37`` | 4    | RRI        | Load word Bank (Imm)       |
+| **SWBr** | regS    | regS^   | regS^^  | ``0x38`` | 3    | RRR        | Store Word Bank (register) |
+| **LWBr** | regS    | regS^^  | regD^   | ``0x39`` | 3    | RRR        | Load Word Bank (register)  |
+^ this is the register that get's saved or saved to
+^^ which memory bank
 # Other Instructions
 
 | Instr.   | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | Instr type | info          |
 | -------- | ------- | ------- | ------- | -------- | ---- | ---------- | ------------- |
 | **NOP**  |         |         |         | ``0x00`` | 1    |            | No operation  |
-| **NOP**  |         |         |         | ``0x34`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x35`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x36`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x37`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x38`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x39`` |      |            | reserved      |
 | **NOP**  |         |         |         | ``0x3A`` |      |            | reserved      |
 | **NOP**  |         |         |         | ``0x3B`` |      |            | reserved      |
 | **NOP**  |         |         |         | ``0x3C`` |      |            | reserved      |
@@ -151,8 +151,8 @@ Take the value of R2, add it with the offset and put it into R1.
 | **MOVE**   | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |                |
 | **RET**    |         |         |         | **MOV** PC RA        | ``0x36`` | PC = RA (does not pop from stack) |                |
 | **RETURN** |         |         |         | **MOV** PC RA        | ``0x36`` |                                   |                |
-| **PUSH**   | reg     | offs    |         | **SW** SP reg offs   | ``0x30`` |                                   | push to stack  |
-| **POP**    | reg     | offs    |         | **LW** SP reg offs   | ``0x31`` |                                   | pop from stack |
+| **PUSH**   | reg     | offs    |         | **SW0** SP reg offs  | ``0x30`` |                                   | push to stack  |
+| **POP**    | reg     | offs    |         | **LW0** SP reg offs  | ``0x31`` |                                   | pop from stack |
 
 ## other Instructions
 | Instr.     | Attr. 1 | Attr. 2 | Attr. 3 | translation    | OP-code  | info         |

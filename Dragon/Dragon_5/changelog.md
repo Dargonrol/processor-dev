@@ -32,4 +32,12 @@
 ### 07.12.2025
 - worked on simulation
 	- finished register file
-	
+
+### 07.12.2025 (2)
+- Reimplemented Register file in simulation
+	after thinking how to implement the register file IRL I noticed that this is pretty much impossible because I would need 100+ IC's just for the register file. 
+- decided that I would like to address more than 128KiB of RAM therefore introduced memory banks.
+- Added **SW0** and **LW0** which always operate on the 0th memory bank as well as **SWB**, **LWB**, **SWBr**, **LWBr** which fetch data from a mem bank without jumping to that address
+- Added **MBR** Register (Memory Bank Register)
+- Added **MBS** Flag to detect Memory Bank switches.
+- Begann implementing Instruction Cache

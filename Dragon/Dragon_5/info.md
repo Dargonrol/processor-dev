@@ -1,13 +1,13 @@
 #Dashboard #Dragon5 #Dragon
 ## general information
 - 16bit CPU
-- Pipelinded (4 stages)
+- Pipelinded (? stages)
 - separate data/instruction-cache
 - dynamic instruction range
 	- 16bit memory addr, 2 byte word (therefore no need for (auipc)
 
 - Non-exclusive caches
-- 
+- Directly Mapped Cache
 
 
 
@@ -17,14 +17,30 @@
 - dword = 32-bit
 - qword = 64-bit
 
+## Instruction Cache
+- Directly Mapped
+- 64k Cache lines
+- 4-bit tag
+- 16-bit set
+that makes realistically: 2x32k x 8 bit memory chips for tag + valid bit and 1x64k x 16 bit memory chip for data
+
+1. Cache Miss
+2. Stall Pipeline
+3. Send nearest round down address to RAM, request data
+4. Increment address by 1, storing receiving words in Cache
+5. after counter at SIZE unstall pipeline
+
+## Graphics
+- banked memory
+- set double frame buffer mode for half the memory size
 # CPU comparison
 ## **Dragon 5:**
 ### Instruction count
-**Total Instruction Count (used op-codes):** 50 (without pseudo)
+**Total Instruction Count (used op-codes):** 56 (without pseudo)
 **Maximal Instruction Count:** 64, 6-bit
 ### Features
 **Pipelined:** yes
-**Variable Instruction Length:** no (maybe in the future)
+**Variable Instruction Length:** no
 
 ## **Dragon 4:**
 ### Instruction count
