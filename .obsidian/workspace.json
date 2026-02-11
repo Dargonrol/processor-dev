@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dragon/Dragon_5/info.md",
+                "file": "Dragon/Dragon_5/changelog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "info"
+              "title": "changelog"
             }
           }
         ]
@@ -166,9 +166,9 @@
   },
   "active": "2d1b5756104ea534",
   "lastOpenFiles": [
+    "Dragon/Dragon_5/info.md",
     "Dragon/Dragon_5/simulation/logic/Dragon_5.bak",
     "Dragon/Dragon_5/changelog.md",
-    "Dragon/Dragon_5/info.md",
     "Dragon/Dragon_5/docs/Instruction Set.md",
     "Dragon/Dragon_5/docs/Microarchitecture.svg",
     "Dragon/Dragon_5/docs/Architecture.md",
