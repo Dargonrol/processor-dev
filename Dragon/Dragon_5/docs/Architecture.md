@@ -43,41 +43,41 @@ Special types are only used ones or twice for specific purposes
 
 # Registers
 
-| assignment | name     | description          |
-| ---------- | -------- | -------------------- |
-| ``0x00``   | 0        | zero                 |
-| ``0x01``   | 1        | one                  |
-| ``0x02``   | s0       | GPR                  |
-| ``0x03``   | s1       | GPR                  |
-| ``0x04``   | s2       | GPR                  |
-| ``0x05``   | s3       | GPR                  |
-| ``0x06``   | s4       | GPR                  |
-| ``0x07``   | s5       | GPR                  |
-| ``0x08``   | t0       | temporary            |
-| ``0x09``   | t1       | temporary            |
-| ``0x0A``   | t2       | temporary            |
-| ``0x0B``   | t3       | temporary            |
-| ``0x0C``   | a0       | argument             |
-| ``0x0D``   | a1       | argument             |
-| ``0x0E``   | a2       | argument             |
-| ``0x0F``   | a3       | argument             |
-| ``0x10``   | a4       | argument             |
-| ``0x11``   | reserved |                      |
-| ``0x12``   | reserved |                      |
-| ``0x13``   | reserved |                      |
-| ``0x14``   | reserved |                      |
-| ``0x15``   | reserved |                      |
-| ``0x16``   | MBR      | Memory Bank Register |
-| ``0x17``   | EPC      | Exception PC         |
-| ``0x18``   | IR       | Interrupt Register   |
-| ``0x19``   | TP       | trap pointer         |
-| ``0x1A``   | GP       | global pointer       |
-| ``0x1B``   | RA       | return address       |
-| ``0x1C``   | BS       | base pointer         |
-| ``0x1D``   | SP       | stack pointer        |
-| ``0x1E``   | PC       | program counter      |
-| ``0x1F``   | FLAGS    | status register      |
-
+| assignment | name     | description           |
+| ---------- | -------- | --------------------- |
+| ``0x00``   | 0        | zero                  |
+| ``0x01``   | 1        | one                   |
+| ``0x02``   | s0       | GPR                   |
+| ``0x03``   | s1       | GPR                   |
+| ``0x04``   | s2       | GPR                   |
+| ``0x05``   | s3       | GPR                   |
+| ``0x06``   | s4       | GPR                   |
+| ``0x07``   | s5       | GPR                   |
+| ``0x08``   | t0       | temporary             |
+| ``0x09``   | t1       | temporary             |
+| ``0x0A``   | t2       | temporary             |
+| ``0x0B``   | t3       | temporary             |
+| ``0x0C``   | a0       | argument              |
+| ``0x0D``   | a1       | argument              |
+| ``0x0E``   | a2       | argument              |
+| ``0x0F``   | a3       | argument              |
+| ``0x10``   | a4       | argument              |
+| ``0x11``   | reserved |                       |
+| ``0x12``   | reserved |                       |
+| ``0x13``   | reserved |                       |
+| ``0x14``   | reserved |                       |
+| ``0x15``   | reserved |                       |
+| ``0x16``   | MBR      | Memory Bank Register^ |
+| ``0x17``   | EPC      | Exception PC          |
+| ``0x18``   | IR       | Interrupt Register    |
+| ``0x19``   | TP       | trap pointer          |
+| ``0x1A``   | GP       | global pointer        |
+| ``0x1B``   | RA       | return address        |
+| ``0x1C``   | BS       | base pointer          |
+| ``0x1D``   | SP       | stack pointer         |
+| ``0x1E``   | PC       | program counter       |
+| ``0x1F``   | FLAGS    | status register       |
+^MBR is stored as a real number. bank 0x0F is bank 15
 # Flags
 
 | Bit | Flag | Description        |
