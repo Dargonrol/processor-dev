@@ -41,3 +41,9 @@
 - Added **MBR** Register (Memory Bank Register)
 - Added **MBS** Flag to detect Memory Bank switches.
 - Begann implementing Instruction Cache
+
+### 04.05.2026
+- Redesigned instruction cache and decided on a bunch of design questions. 
+	The Cache is going to be 64kx32 big. the first 16 bit are the actual value, the rest consists of the tag and valid bit. 
+	I will use write though, write allocate to make things simpler.
+- Continued implementing the cache in logisim
