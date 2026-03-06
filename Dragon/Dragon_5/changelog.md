@@ -37,13 +37,20 @@
 - Reimplemented Register file in simulation
 	after thinking how to implement the register file IRL I noticed that this is pretty much impossible because I would need 100+ IC's just for the register file. 
 - decided that I would like to address more than 128KiB of RAM therefore introduced memory banks.
-- Added **SW0** and **LW0** which always operate on the 0th memory bank as well as **SWB**, **LWB**, **SWBr**, **LWBr** which fetch data from a mem bank without jumping to that address
+- Added **SW0** and **LW0** which always operate on the 0th memory bank as well as **SWB**, **LWB**, **SWBr**, **LWBr** which fetch data from a mem bank without jumping to that address / switching the bank.
 - Added **MBR** Register (Memory Bank Register)
 - Added **MBS** Flag to detect Memory Bank switches.
 - Begann implementing Instruction Cache
 
-### 04.05.2026
+### 04.03.2026
 - Redesigned instruction cache and decided on a bunch of design questions. 
 	The Cache is going to be 64kx32 big. the first 16 bit are the actual value, the rest consists of the tag and valid bit. 
 	I will use write though, write allocate to make things simpler.
 - Continued implementing the cache in logisim
+
+### 05.03.2026
+- changed MBR register size  to 8 bit. Every thing else is overkill, you are not going to connect 64000 memory expansion slots to the pcb. Because of that the tag bits are only 7 bit wide now. 
+- continued Instr Cache in logisim
+- I came across multiple  huge problems:
+	- way to many data lines into the cache: 100+, unrealistic in irl.
+	- self modifying code. If a write instruction stores a value at a cached code location, the cache wouldn't update. I could either simply not allow writing to code segments, add a cache invalidation instruction or implement coherence mechanism. the later is needed anyway in the data cache because of I/O. So now I have to decide what to do. I think for now I will implement a proper coherence mechanism. The inner workings are explained in the Instruction Cache Brainstorming file. MMIO should not be cached!!! So bypass cache for IO addresses!!!

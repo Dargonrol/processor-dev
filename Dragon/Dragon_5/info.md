@@ -6,7 +6,6 @@
 - dynamic instruction range
 	- 16bit memory addr, 2 byte word (therefore no need for (auipc)
 
-- Non-exclusive caches
 - Directly Mapped Cache
 
 
