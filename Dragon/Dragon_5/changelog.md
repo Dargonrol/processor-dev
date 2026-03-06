@@ -54,3 +54,7 @@
 - I came across multiple  huge problems:
 	- way to many data lines into the cache: 100+, unrealistic in irl.
 	- self modifying code. If a write instruction stores a value at a cached code location, the cache wouldn't update. I could either simply not allow writing to code segments, add a cache invalidation instruction or implement coherence mechanism. the later is needed anyway in the data cache because of I/O. So now I have to decide what to do. I think for now I will implement a proper coherence mechanism. The inner workings are explained in the Instruction Cache Brainstorming file. MMIO should not be cached!!! So bypass cache for IO addresses!!!
+
+### 06.05.2026
+- finished data cache
+- finished instruction cache

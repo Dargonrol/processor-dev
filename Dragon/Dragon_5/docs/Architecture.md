@@ -100,3 +100,14 @@ Special types are only used ones or twice for specific purposes
 | 15  | IF   | Interrupt Enable   |
 
 ^ Auxiliary Flag is used for BCD applications. It shows if an addition or subtraction results in a carry or borrow between the lowest 4 bits (nibble).
+
+# memory layout
+
+| range           | description      |
+| --------------- | ---------------- |
+| 0xF800 - 0xFFFF | MMIO             |
+| 0xF000 - 0xF7FF | Bootloader       |
+| 0xE000 - 0xEFFF | Interrupt Vector |
+| 0xC000 - 0xDFFF | Code             |
+| 0x8000 - 0xBFFF | Data             |
+| 0x0000 - 0x7FFF | Heap/Stack       |
