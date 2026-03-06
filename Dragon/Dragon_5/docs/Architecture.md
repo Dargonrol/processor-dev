@@ -45,8 +45,8 @@ Special types are only used ones or twice for specific purposes
 
 | assignment | name     | description           |
 | ---------- | -------- | --------------------- |
-| ``0x00``   | 0        | zero                  |
-| ``0x01``   | 1        | one                   |
+| ``0x00``   | 0        | zero°                 |
+| ``0x01``   | 1        | one°                  |
 | ``0x02``   | s0       | GPR                   |
 | ``0x03``   | s1       | GPR                   |
 | ``0x04``   | s2       | GPR                   |
@@ -66,7 +66,7 @@ Special types are only used ones or twice for specific purposes
 | ``0x12``   | reserved |                       |
 | ``0x13``   | reserved |                       |
 | ``0x14``   | reserved |                       |
-| ``0x15``   | reserved |                       |
+| ``0x15``   | MEM      | Memory Bank count^^°  |
 | ``0x16``   | MBR      | Memory Bank Register^ |
 | ``0x17``   | EPC      | Exception PC          |
 | ``0x18``   | IR       | Interrupt Register    |
@@ -78,6 +78,8 @@ Special types are only used ones or twice for specific purposes
 | ``0x1E``   | PC       | program counter       |
 | ``0x1F``   | FLAGS    | status register       |
 ^MBR is stored as a real number. bank 0x0F is bank 15
+^^ how many memory banks are connected.
+° this register is read only
 # Flags
 
 | Bit | Flag | Description        |

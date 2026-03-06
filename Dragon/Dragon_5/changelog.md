@@ -58,3 +58,12 @@
 ### 06.05.2026
 - finished data cache
 - finished instruction cache
+
+### 06.05.2026 (2)
+- added Cache invalidation instructions
+- refactored a bunch of stuff
+- began partlist
+- began main memory in logisim
+	- finished memory card
+	- began working on main memory controller
+- added memory bank count register that always tells you the amount of connected memory banks

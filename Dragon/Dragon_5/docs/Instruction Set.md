@@ -90,15 +90,15 @@ Take the value of R2, add it with the offset and put it into R1.
 ^^ which memory bank
 # Other Instructions
 
-| Instr.   | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | Instr type | info          |
-| -------- | ------- | ------- | ------- | -------- | ---- | ---------- | ------------- |
-| **NOP**  |         |         |         | ``0x00`` | 1    |            | No operation  |
-| **NOP**  |         |         |         | ``0x3A`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x3B`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x3C`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x3D`` |      |            | reserved      |
-| **NOP**  |         |         |         | ``0x3E`` |      |            | reserved      |
-| **HALT** |         |         |         | ``0x3F`` | 1    |            | halts the CPU |
+| Instr.    | Attr. 1 | Attr. 2 | Attr. 3 | OP-code  | size | Instr type | info                         |
+| --------- | ------- | ------- | ------- | -------- | ---- | ---------- | ---------------------------- |
+| **NOP**   |         |         |         | ``0x00`` | 1    |            | No operation                 |
+| **INVDC** | regS    |         |         | ``0x3A`` |      |            | Invalidate data cache        |
+| **INVIC** | regS    |         |         | ``0x3B`` |      |            | Invalidate instruction cache |
+| **NOP**   |         |         |         | ``0x3C`` |      |            | reserved                     |
+| **NOP**   |         |         |         | ``0x3D`` |      |            | reserved                     |
+| **NOP**   |         |         |         | ``0x3E`` |      |            | reserved                     |
+| **HALT**  |         |         |         | ``0x3F`` | 1    |            | halts the CPU                |
 
 
 
@@ -142,17 +142,17 @@ Take the value of R2, add it with the offset and put it into R1.
 | **JBE** | offs       |         |         | **JBEr** PC x0 offs     | ``0x2E`` |                    |
 
 ## Memory Operations
-| Instr.     | Attr. 1 | Attr. 2 | Attr. 3 | translation          | OP-code  | info                              |                |
-| ---------- | ------- | ------- | ------- | -------------------- | -------- | --------------------------------- | -------------- |
-| **WRITE**  | regS    | regS    | Imm     | **SW** regS regS Imm | ``0x30`` |                                   |                |
-| **READ**   | regS    | regD    | Imm     | **LW** regS regD Imm | ``0x31`` |                                   |                |
-| **WRITEi** | regS    | Imm     |         | **SWi** regS Imm     | ``0x34`` |                                   |                |
-| **MV**     | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |                |
-| **MOVE**   | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |                |
-| **RET**    |         |         |         | **MOV** PC RA        | ``0x36`` | PC = RA (does not pop from stack) |                |
-| **RETURN** |         |         |         | **MOV** PC RA        | ``0x36`` |                                   |                |
-| **PUSH**   | reg     | offs    |         | **SW0** SP reg offs  | ``0x30`` |                                   | push to stack  |
-| **POP**    | reg     | offs    |         | **LW0** SP reg offs  | ``0x31`` |                                   | pop from stack |
+| Instr.     | Attr. 1 | Attr. 2 | Attr. 3 | translation          | OP-code  | info                              |
+| ---------- | ------- | ------- | ------- | -------------------- | -------- | --------------------------------- |
+| **WRITE**  | regS    | regS    | Imm     | **SW** regS regS Imm | ``0x30`` |                                   |
+| **READ**   | regS    | regD    | Imm     | **LW** regS regD Imm | ``0x31`` |                                   |
+| **WRITEi** | regS    | Imm     |         | **SWi** regS Imm     | ``0x34`` |                                   |
+| **MV**     | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |
+| **MOVE**   | regS    | regD    |         | **MOV** regS regD    | ``0x36`` |                                   |
+| **RET**    |         |         |         | **MOV** PC RA        | ``0x36`` | PC = RA (does not pop from stack) |
+| **RETURN** |         |         |         | **MOV** PC RA        | ``0x36`` |                                   |
+| **PUSH**   | reg     | offs    |         | **SW0** SP reg offs  | ``0x30`` | push to stack                     |
+| **POP**    | reg     | offs    |         | **LW0** SP reg offs  | ``0x31`` | pop from stack                    |
 
 ## other Instructions
 | Instr.     | Attr. 1 | Attr. 2 | Attr. 3 | translation    | OP-code  | info         |
