@@ -29,8 +29,7 @@ The logic simulation was fine but for some reason I never got the flags working 
 The control logic is also really bad since it consists of 4x32kb of ROMs to decode instructions. This is also why Dragon-4 is really difficult to recreate in games.
 
 ## Dragon-5
-My current work of art. Made to be easily build in computer games but at the same time being quite capable. Performance wise it should be comparable with a commodore 128 or even better.
-Still WIP so is this description...
+My current work of art. Originally made to be easily build in computer games but honestly I might scratch that. More important is that I am getting really close to the physical limit for a completely custom microarchitecture. This is also why this will be my last and most capable processor I will build IRL. It's a risc like CPU with a capable ISA. It has stuff like MMIO, basic interrupt support, memory banks to support a large amount of memory as well as seperate instruction and data caches. It's still in early WIP. You'll find a simple comparison of the CPU's in the [readme](Dragon/Dragon_5/readme.md) of Dragon-5.
 
 ## LED+
 This CPU was developed as an more capable successor to the LED-CPU in the game 'Turing Complete'. LED+ was basically completed but since I wasn't happy I kept trying to improve it but ultimately failed. There were even more iterations of the LED like LED++ and LED+++ but I decided to not include them in this list because they never got really far. Eventually the need for a good processor ingame let to the beginning of the development of the Dragon-5.
@@ -38,7 +37,7 @@ Fun-fact:
 Originally Dragon-5 was going to be Phoenix-1 and Phonix-1 was going to be Dragon-5.  Since Dragon-4 was my first real CPU I wanted the most capable and powerful CPU to be the successor of that. And Phoenix-1 was supposed to be the CPU 'for games'. However the reason why I did not do it that way was because the architecture and microarchitecture of the Dragon-4 (if you can even call it architecture) was really simple which fits to the now Dragon-5 (of course Dragon-5 is much more capable and is heavily inspired by the RISC-V). Phoenix-1 is going to be much more complicated therefore I thought a new name would be more fitting.
 
 ## Phönix-1
-Phoenix-1 is going to be my most capable processor yet. While Dragon-5 was designed to be easy to implement in games while being quite capable, Phoenix-1 is of another caliber. In future it should be able to run a simple operating system etc. (Description WIP)
+Phoenix-1 is going to be my most capable processor yet. While Dragon-5 was designed to be the last processor IRL, Phoenix-1 will be completely simulated giving me complete freedom. In future it should be able to run a simple operating system etc. (Description WIP)
 - Has things like DMA, Branch prediction etc.
 
 ## Surtr-1
