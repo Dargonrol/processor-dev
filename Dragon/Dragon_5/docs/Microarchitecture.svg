@@ -7,7 +7,7 @@
    viewBox="0 0 1511.811 793.70081"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="Microarchitecture.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     inkscape:zoom="1.0824416"
-     inkscape:cx="618.0472"
-     inkscape:cy="198.16312"
-     inkscape:window-width="1280"
-     inkscape:window-height="1052"
+     inkscape:zoom="0.7654018"
+     inkscape:cx="697.67278"
+     inkscape:cy="311.60105"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer2" />
   <defs
      id="defs1">
     <clipPath
@@ -149,8 +149,8 @@
        d="m 737.52112,169.84543 h 91.45523 v -62.71216"
        id="path7" />
     <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 740.02204,211.80078 H 1448.8001"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.8416;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 397.06492,211.80078 H 1448.8001"
        id="path17" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-opacity:1;paint-order:stroke fill markers"
@@ -368,6 +368,18 @@
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 1184.3595,523.35387 h 29.1009 v -54.04449 h 18.4767"
        id="path69" />
+    <path
+       style="fill:#000000;stroke-width:2.51338581;stroke-dasharray:none"
+       d="M 397.17701,284.4911 H 1093.8699"
+       id="path10" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:2.12246;stroke-dasharray:none;stroke-opacity:1"
+       d="M 397.02531,276.97871 H 1093.9916"
+       id="path15" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:2.13543;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1093.5925,422.88656 V 277.38217"
+       id="path41" />
   </g>
   <g
      inkscape:label="Objects"
@@ -866,7 +878,7 @@
     </g>
     <g
        id="g17"
-       transform="translate(-168.53893,-20.250801)"
+       transform="translate(-241.04987,-35.928841)"
        inkscape:label="RAM">
       <rect
          style="fill:#8080ff;fill-opacity:1;stroke:none;stroke-width:1.51181;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
@@ -979,7 +991,7 @@
     <g
        id="g21"
        inkscape:label="Address Controller"
-       transform="translate(56.067562,37.05596)">
+       transform="translate(-342.56826,-107.52459)">
       <rect
          style="fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:1.51181;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
          id="rect19"
@@ -1216,8 +1228,8 @@
        d="m 633.2905,509.49631 h 59.12559 V 386.62594 H 297.93755"
        id="path80" />
     <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 397.71199,409.25995 V 212.94451"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.92492;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 397.71199,409.25995 V 90.997978"
        id="path81" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-opacity:1;paint-order:stroke fill markers"

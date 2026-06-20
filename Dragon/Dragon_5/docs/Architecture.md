@@ -66,7 +66,7 @@ Special types are only used ones or twice for specific purposes
 | ``0x12``   | reserved |                       |
 | ``0x13``   | reserved |                       |
 | ``0x14``   | reserved |                       |
-| ``0x15``   | MEM      | Memory Bank count^^°  |
+| ``0x15``   | MEM      | Memory Card count^^°  |
 | ``0x16``   | MBR      | Memory Bank Register^ |
 | ``0x17``   | EPC      | Exception PC          |
 | ``0x18``   | IR       | Interrupt Register    |
@@ -78,7 +78,7 @@ Special types are only used ones or twice for specific purposes
 | ``0x1E``   | PC       | program counter       |
 | ``0x1F``   | FLAGS    | status register       |
 ^MBR is stored as a real number. bank 0x0F is bank 15
-^^ how many memory banks are connected.
+^^ how many memory Cards are connected. one bit per card
 ° this register is read only
 # Flags
 
@@ -113,3 +113,7 @@ Special types are only used ones or twice for specific purposes
 | 0xC000 - 0xDFFF | Code             |
 | 0x8000 - 0xBFFF | Data             |
 | 0x0000 - 0x7FFF | Heap/Stack       |
+
+This is only one memory bank and the one which is selected if the Memory Bank Register (MBR) is 0x00. You can select up to 32 banks by incrementing the MBR by one:
+	`Memory Bank 00:     MBR = 0x00`
+	`Memory Bank 31:  MBR = 0x1F`

@@ -11,12 +11,14 @@
             "id": "5e7bf7dd2d617eeb",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Dragon/Dragon_5/docs/Microarchitecture.svg"
+                "file": "Dragon/Dragon_5/changelog.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Microarchitecture"
+              "icon": "lucide-file",
+              "title": "changelog"
             }
           }
         ]
@@ -164,20 +166,21 @@
   },
   "active": "5e7bf7dd2d617eeb",
   "lastOpenFiles": [
+    "Dragon/Dragon_5/docs/Address_Controller.svg",
+    "Dragon/Dragon_5/docs/Microarchitecture.svg",
+    "Dragon/Dragon_5/docs/Architecture.md",
+    "Dragon/Dragon_5/docs/Instruction Set.md",
     "Dragon/Dragon_5/changelog.md",
+    "Dragon/Dragon_5/simulation/logisim/Dragon_5.bak",
+    "Dragon/Dragon_5/docs/implementation detail/Main Memory Brainstorming.md",
+    "Dragon/Dragon_5/docs/physical build/partlist.md",
     "Dragon/Dragon_5/docs/implementation detail/Instruction Cache Brainstorming.md",
     "Dragon/Dragon_5/readme.md",
     "Dragon/Dragon_5/docs/implementation detail/IO brainstorming.md",
-    "Dragon/Dragon_5/simulation/logisim/Dragon_5.bak",
-    "Dragon/Dragon_5/docs/implementation detail/Main Memory Brainstorming.md",
-    "Dragon/Dragon_5/docs/Architecture.md",
-    "Dragon/Dragon_5/docs/Instruction Set.md",
-    "Dragon/Dragon_5/docs/physical build/partlist.md",
     "Dragon/Dragon_5/docs/physical build/Untitled",
     "Dragon/Dragon_5/docs/physical build/schematics",
     "Dragon/Dragon_5/docs/physical build",
     "Dragon/Dragon_5/simulation/fpga",
-    "Dragon/Dragon_5/docs/Microarchitecture.svg",
     "Dragon/Dragon_5/simulation/logic/Dragon_5.bak",
     "readme.md",
     "Dragon/Dragon_5/docs/implementation detail",

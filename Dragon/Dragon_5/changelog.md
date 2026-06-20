@@ -70,3 +70,11 @@
 
 ### 08.03.2026
 - continued working on memory controller
+
+### 17.06.2026
+- refactored memory controller a bit
+- added documentation
+- changed memory bank count register (MBC) to memory card count (MCC). Every bit in the register represents a physical card slot. with the LSB beeing the 0-th card and bit 8 beeing the 7-th card.
+
+### 20.06.2026
+- created Memory Bus diagram
